@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    font-family: 'Josefin Sans', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url("/images/bg.jpg") no-repeat center;
+}
+
+.card-wrapper {
+    width: 450px;
+    height: 600px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url("/images/bg.jpg") no-repeat center;
+    transition: box-shadow 1s;
+    overflow: hidden;
+}
+
+.card-wrapper:hover {
+    box-shadow: 0 0 15PX #FFF;
+}
+
+.card-wrapper:hover .card {
+    top: 0;
+}
+
+.card {
+    background: linear-gradient(190deg, rgba(32, 255, 90, .8)50%, rgba(240, 54, 36, .8)0);
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: -100%;
+    transition: top .3s 1.5s;
+}
+
+.card-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 15px;
+    border: 2px solid #fff;
+    padding: 10px;
+    box-shadow: 20px 30px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card-heading {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 25px;
+    color: #FFF;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 300;
+    background: linear-gradient(#0a9751, #06831b);
+    width: 70%;
+    text-align: center;
+    padding: 5px 0;
+    transform: perspective(1000px) skewX(-20deg) rotateY(40deg);
+}
+
+.card-paragraph {
+    width: 85%;
+    text-align: justify;
+    font-size: 18px;
+    color: #ddd;
+    position: relative;
+}
+
+.card-paragraph::first-letter {
+    margin-left: 40px;
+}
+
+.card-paragraph i {
+    color: #fff;
+    font-size: 25px;
+    font-style: italic;
+}
+
+.card-paragraph i:first-child {
+    position: absolute;
+    top: -10px;
+}
+
+.card-paragraph i:last-child {
+    position: absolute;
+    bottom: -10px;
+}
+
+.card-icons {
+    list-style: none;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.card-icon-link {
+    text-decoration: none;
+    border: 1px solid #fff;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.card-icon {
+    font-size: 20px;
+    color: #fff;
+}
+
+.card-icon-link:hover {
+    border: 1px solid rgb(81, 47, 230);
+}
+
+.card-icon-link:hover .card-icon {
+    color: rgb(81, 47, 230);
+}
+
+.card-btn {
+    outline: none;
+    border: none;
+    width: 150px;
+    height: 35px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    background: linear-gradient(#0a9751, #0a9751);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
